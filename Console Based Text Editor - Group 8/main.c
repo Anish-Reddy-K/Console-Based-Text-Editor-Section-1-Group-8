@@ -1,3 +1,4 @@
+
 #include "uistuff.h"
 #include "backend.h"	
 
@@ -15,6 +16,7 @@ int main(void)
 	{
 		Mainmenu(); // Print main menu
 		int in = getmenuinput();
+		system("@cls||clear");
 		switch (in) {
 		case 1:
 		{
@@ -43,23 +45,18 @@ int main(void)
 		}
 		case 6:
 		{
-			printf("\nNot yet in use\n");
-			break;
-		}
-		case 7:
-		{
+
 			run = false; // Ends run loop before breaking
 			break;
 		}
 		default:
 		{
-			printf("\nenter a valid number dipshit"); // If input isnt a valid option, inform user
+			printf("\nPlease enter a valid option.\n"); // If input isnt a valid option, inform user
 			break;
 		}
 		}
 	}
 	atexit((*programexit)); // Calls programexit function before closing program
 }
-
 
 
