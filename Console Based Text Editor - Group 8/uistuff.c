@@ -3,13 +3,15 @@
 
 void Mainmenu(void) // Displays main menu options 
 {
-	printf("\n1: Create new file");
-	printf("\n2: View existing files");
-	printf("\n3: Open existing file");
-	printf("\n4: Delete existing file");
-	printf("\n5: View contents of file");
-	printf("\n6: Settings (May be used later to shut off autocorrect but not sure yet)");
-	printf("\n7: Exit program\n");
+	printf("\n\n*********************************");
+	printf("\n* 1: Create new file            *");
+	printf("\n* 2: View existing files        *");
+	printf("\n* 3: Open existing file         *");
+	printf("\n* 4: Delete existing file       *");
+	printf("\n* 5: View contents of file      *");
+	/*printf("\n* 6: Settings (May be used later to shut off autocorrect but not sure yet)");*/
+	printf("\n* 6: Exit program               *\n\n");
+	printf("Enter here: ");
 }
 void displayfile(void)
 {
@@ -21,6 +23,7 @@ void displayfile(void)
 	else
 	{
 		system("@cls||clear"); // Clear screen before printing file
+		printf("File contents shown below:\n\n");
 		FILE* fp = fopen(name, "r");
 		int linecount = getlinecount(fp);
 		for (int i = 0; i <= linecount; i++)

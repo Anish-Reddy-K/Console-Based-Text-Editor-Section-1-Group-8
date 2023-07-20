@@ -53,7 +53,7 @@ void createfile(void)
 	if (strcmp(name, "\0") == 0)
 		randomfilename(name); // Create random nameif no name is entered
 	if (overwriteprotect(name) == false) // Checks if file already exists with the name given by user
-		printf("\nFile with thaat name already exists. Please delete existing file before creating new file with this name.");
+		printf("\nFile with that name already exists. Please delete existing file before creating new file with this name.");
 	else
 	{
 		if (addfiletolist(name) == false) // Addsfile to list, but displays error message if false is returned

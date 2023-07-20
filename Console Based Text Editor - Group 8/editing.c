@@ -179,6 +179,7 @@ void editfile(char* name)
         }
         }
     }
+    system("@cls||clear");
     for (int i = 0; i <= maxsel; i++)
         free(s[i]); // Free each char* used, then free pointer to char* array and position array
     free(s);
