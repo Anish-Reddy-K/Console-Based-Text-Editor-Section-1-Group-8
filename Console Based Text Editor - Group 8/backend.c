@@ -184,6 +184,7 @@ int getlinecount(FILE* fp)
 	}
 	return num;
 }
+
 void savefile(char* name, char** contents, int linecount)
 {
 	FILE* fp = fopen(name, "w"); // Overwrites previous file with same name
@@ -205,3 +206,4 @@ void randomfilename(char* name)
 	for (int i = 4; i < 10; i++)
 		name[i] = num[i - 4]; // Append file name to add random number
 }
+
