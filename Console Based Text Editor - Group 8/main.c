@@ -63,5 +63,3 @@ int main(int argc, char* argv[])
 	atexit((*programexit)); // Calls programexit function before closing program
 }
 
-
-

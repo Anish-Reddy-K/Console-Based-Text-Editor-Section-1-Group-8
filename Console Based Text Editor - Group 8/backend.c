@@ -206,3 +206,4 @@ void randomfilename(char* name)
 	for (int i = 4; i < 10; i++)
 		name[i] = num[i - 4]; // Append file name to add random number
 }
+

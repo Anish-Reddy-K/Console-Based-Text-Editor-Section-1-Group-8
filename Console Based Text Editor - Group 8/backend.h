@@ -20,3 +20,4 @@ void removenewline(char*);
 int getlinecount(FILE*);
 void savefile(char*, char**, int);
 void randomfilename(char*);
+
