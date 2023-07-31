@@ -184,16 +184,7 @@ int getlinecount(FILE* fp)
 	}
 	return num;
 }
-void savefile(char* name, char contents[][TEXTSIZE], int linecount)
-	fgets(count, LINECOUNTSIZE, fp); // Reads first line from file containing number of lines to be read
-	removenewline(count);
-	int num = atoi(count);
-	if (num < 0) { // If atoi returns -1, error reading linecount from file has occured
-		printf("\nError reading data from file. Program aborting.");
-		exit(-1);
-	}
-	return num; // If no error, return number to caller
-}
+
 void savefile(char* name, char** contents, int linecount)
 {
 	FILE* fp = fopen(name, "w"); // Overwrites previous file with same name
@@ -215,3 +206,4 @@ void randomfilename(char* name)
 	for (int i = 4; i < 10; i++)
 		name[i] = num[i - 4]; // Append file name to add random number
 }
+
