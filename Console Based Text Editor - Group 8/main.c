@@ -2,9 +2,14 @@
 #include "uistuff.h"
 #include "backend.h"	
 
-int main(void)
+int main(int argc, char* argv[])
 {
-	printf("\nWelcome to command line text editor! Options below, enter number associated with desired option.");
+	if (argc <= 1)
+	{
+		printf("\nPlease enter your name as an argument.\n");
+		exit(2);
+	}
+	printf("\nWelcome to command line text editor, %s! Options below, enter number associated with desired option.", argv[1]);
 	srand(time(0)); // Seeds rand with time since 0
 	FILE* fp = fopen(FILELIST, "r");
 	if (!fp)
@@ -45,7 +50,6 @@ int main(void)
 		}
 		case 6:
 		{
-
 			run = false; // Ends run loop before breaking
 			break;
 		}
