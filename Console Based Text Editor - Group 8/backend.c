@@ -40,7 +40,6 @@ void printfiles(void)
 		removenewline(filename);
 		if (strcmp(filename, "EMPTY") != 0)
 			printf("%d: %s\n", filenum++, filename); // Incriments displayed counter each time it is used
-
 	}
 	if (fp)
 		fclose(fp);
@@ -176,6 +175,16 @@ void openfile(void)
 int getlinecount(FILE* fp)
 {
 	char count[LINECOUNTSIZE];
+	fgets(count, LINECOUNTSIZE, fp);
+	removenewline(count);
+	int num = atoi(count);
+	if (num < 0) {
+		printf("\nError reading data from file. Program aborting.");
+		exit(-1);
+	}
+	return num;
+}
+void savefile(char* name, char contents[][TEXTSIZE], int linecount)
 	fgets(count, LINECOUNTSIZE, fp); // Reads first line from file containing number of lines to be read
 	removenewline(count);
 	int num = atoi(count);

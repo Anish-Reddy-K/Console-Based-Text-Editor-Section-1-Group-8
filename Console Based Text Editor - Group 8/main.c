@@ -1,3 +1,5 @@
+#include "uistuff.h"
+#include "backend.h"	
 
 #include "uistuff.h"
 #include "backend.h"	
@@ -46,11 +48,10 @@ int main(int argc, char* argv[])
 		case 5:
 		{
 			displayfile(); // Display file of user choice
-			break;
+      break;
 		}
 		case 6:
 		{
-
 			run = false; // Ends run loop before breaking
 			break;
 		}
@@ -63,5 +64,4 @@ int main(int argc, char* argv[])
 	}
 	atexit((*programexit)); // Calls programexit function before closing program
 }
-
 

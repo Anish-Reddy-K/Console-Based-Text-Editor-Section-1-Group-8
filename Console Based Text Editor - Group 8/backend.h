@@ -1,6 +1,5 @@
 #pragma once
 #include "uistuff.h"
-
 typedef struct FileDirShell { // struct for a copy of the file directory
 	char files[FILECOUNT][NAMESIZE];
 }DIRCOPY;
