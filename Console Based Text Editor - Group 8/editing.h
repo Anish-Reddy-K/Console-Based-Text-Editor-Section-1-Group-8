@@ -1,4 +1,5 @@
 #pragma once
+// Preprocesor directives for special key inputs when editing
 #define ENTER 13
 #define ARROW 224
 #define LEFT 75
@@ -10,7 +11,7 @@
 
 #include "uistuff.h"
 #include "backend.h"
-
+ // Function declarations when editing
 int insertInStr(char* s, size_t position, char c);
 void deleteSymbol(char* s, size_t position);
 void printTextWithCursor(char* s, size_t position);
