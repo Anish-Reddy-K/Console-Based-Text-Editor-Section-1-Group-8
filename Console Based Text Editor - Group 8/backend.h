@@ -1,5 +1,6 @@
 #pragma once
 #include "uistuff.h"
+
 typedef struct FileDirShell { // struct for a copy of the file directory
 	char files[FILECOUNT][NAMESIZE];
 }DIRCOPY;
@@ -19,3 +20,4 @@ void removenewline(char*);
 int getlinecount(FILE*);
 void savefile(char*, char**, int);
 void randomfilename(char*);
+

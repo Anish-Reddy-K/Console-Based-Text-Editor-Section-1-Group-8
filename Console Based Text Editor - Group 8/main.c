@@ -1,5 +1,3 @@
-#include "uistuff.h"
-#include "backend.h"	
 
 #include "uistuff.h"
 #include "backend.h"	
@@ -48,7 +46,7 @@ int main(int argc, char* argv[])
 		case 5:
 		{
 			displayfile(); // Display file of user choice
-      break;
+			break;
 		}
 		case 6:
 		{
@@ -64,3 +62,4 @@ int main(int argc, char* argv[])
 	}
 	atexit((*programexit)); // Calls programexit function before closing program
 }
+
