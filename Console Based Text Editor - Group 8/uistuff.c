@@ -10,10 +10,9 @@ void Mainmenu(void) // Displays main menu options
 	printf("\n* 3: Open existing file         *");
 	printf("\n* 4: Delete existing file       *");
 	printf("\n* 5: View contents of file      *");
-	/*printf("\n* 6: Settings (May be used later to shut off autocorrect but not sure yet)");*/
 	printf("\n* 6: Exit program               *\n\n");
 	printf("Enter here: ");
-}
+} // More settigs to be added later, once autocorrect is implimented and additional features.
 void displayfile(void)
 {
 	printf("\nEnter name of file you wish to view: ");
@@ -30,8 +29,12 @@ void displayfile(void)
 		for (int i = 0; i <= linecount; i++)
 		{
 			char contents[TEXTSIZE]; // Each line read from file goes into this buffer
+			contents[0] = 0;
 			fgets(contents, TEXTSIZE, fp);
-			printf("%s", contents); // Contents buffer displays each line
+			if (i == 0 && contents[i] == 0)
+				printf("File is empty. Open the file with the 'edit' option to give it some contents.");
+			else
+				printf("%s", contents); // Contents buffer displays each line*/
 		}
 		if (fp)
 			fclose(fp);

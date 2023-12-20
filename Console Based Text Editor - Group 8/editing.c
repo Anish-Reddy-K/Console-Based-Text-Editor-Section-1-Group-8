@@ -73,7 +73,7 @@ void editfile(char* name)
         putchar('\r');
         switch (c)
         {
-        case ARROW: // Also works with detlete
+        case ARROW: // Also works with delete
             c = _getch();
             if (c == LEFT)
             {

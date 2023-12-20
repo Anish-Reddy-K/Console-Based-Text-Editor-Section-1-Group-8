@@ -99,7 +99,7 @@ bool addfiletolist(char* name)
 	if (fp)
 		fclose(fp);
 	if (num == -1)
-		return false; // Return false if file directory is funn (a file needs to be deleted before new ones can be added)
+		return false; // Return false if file directory is full (a file needs to be deleted before new ones can be added)
 	FILE* fp2 = fopen(FILELIST, "w");
 	for (int i = 0; i < FILECOUNT; i++)
 	{
